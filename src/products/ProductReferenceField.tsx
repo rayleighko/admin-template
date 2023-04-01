@@ -1,26 +1,24 @@
-import * as React from 'react';
-import { ReferenceField, ReferenceFieldProps, TextField } from 'react-admin';
+import { ReferenceField, ReferenceFieldProps, TextField } from "react-admin"
 
 interface Props {
-    source?: string;
+  source?: string
 }
 
 const ProductReferenceField = (
-    props: Props &
-        Omit<Omit<ReferenceFieldProps, 'source'>, 'reference' | 'children'>
+  props: Props &
+    Omit<Omit<ReferenceFieldProps, "source">, "reference" | "children">,
 ) => (
-    <ReferenceField
-        label="Product"
-        source="product_id"
-        reference="products"
-        {...props}
-    >
-        <TextField source="reference" />
-    </ReferenceField>
-);
+  <ReferenceField
+    label="Product"
+    source="product_id"
+    reference="products"
+    {...props}>
+    <TextField source="reference" />
+  </ReferenceField>
+)
 
 ProductReferenceField.defaultProps = {
-    source: 'product_id',
-};
+  source: "product_id",
+}
 
-export default ProductReferenceField;
+export default ProductReferenceField

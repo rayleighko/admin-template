@@ -1,1 +1,1 @@
-declare module 'json-graphql-server';
+declare module "json-graphql-server"
